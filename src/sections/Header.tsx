@@ -57,16 +57,19 @@ export function Header({ onApply }: { onApply: () => void }) {
         </div>
       </div>
 
-      {open && (
-        <div className="only-mobile px-6 pb-6 pt-2" style={{ background: 'rgba(2,15,11,.96)', borderTop: '1px solid rgba(212,175,55,.2)' }}>
-          <div className="flex flex-col gap-4">
+      <div
+        className={'only-mobile mobile-menu-panel ' + (open ? 'open' : '')}
+        aria-hidden={!open}
+      >
+        <div className="px-6 pb-6 pt-2">
+          <div className="mobile-menu-content flex flex-col gap-4">
             {links.map(([label, id]) => (
-              <a key={id} href={'#' + id} onClick={() => setOpen(false)} className="text-[15px] tracking-[.1em] uppercase text-[var(--warm)]">{label}</a>
+              <a key={id} href={'#' + id} onClick={() => setOpen(false)} className="mobile-menu-link text-[15px] tracking-[.1em] uppercase text-[var(--warm)]">{label}</a>
             ))}
             <button onClick={() => { setOpen(false); onApply() }} className="btn-gold mt-2">Aplicar para a Mentoria</button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
