@@ -49,7 +49,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button onClick={onApply} className="btn-gold">Quero aplicar para a mentoria</button>
+            <button id="hero-apply-btn" onClick={onApply} className="btn-gold" data-sticky-hide>Quero aplicar para a mentoria</button>
             <a href="#metodo" className="btn-ghost">Conhecer o método →</a>
           </div>
 
@@ -64,29 +64,139 @@ export function Hero({ onApply }: { onApply: () => void }) {
         </div>
 
         <div className="md:col-span-5 relative fade-in hero-gear-col">
-          <div className="relative w-full mx-auto md:mx-0 md:ml-auto overflow-hidden" style={{ aspectRatio: '1/1', maxWidth: 540 }}>
-            <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative w-full mx-auto md:mx-0 md:ml-auto hero-stage" style={{ aspectRatio: '1/1', maxWidth: 580 }}>
+            {/* ENGRENAGENS — z-index 1, ficam atrás da foto */}
+            <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 1 }}>
               <div className="spin-slow" style={{ width: '100%', height: '100%' }}>
                 <GearOutline size={520} teeth={16} strokeWidth={1.4} />
               </div>
             </div>
-            <div className="absolute" style={{ top: '10%', right: '6%', width: '32%', aspectRatio: '1/1' }}>
+            <div className="absolute" style={{ top: '10%', right: '6%', width: '32%', aspectRatio: '1/1', zIndex: 1 }}>
               <div className="spin-slow-rev" style={{ width: '100%', height: '100%' }}>
                 <GearOutline size={180} teeth={10} strokeWidth={1.4} />
               </div>
             </div>
-            <div className="absolute" style={{ bottom: '6%', left: '6%', width: '22%', aspectRatio: '1/1' }}>
+            <div className="absolute" style={{ bottom: '6%', left: '6%', width: '22%', aspectRatio: '1/1', zIndex: 1 }}>
               <div className="spin-slow" style={{ width: '100%', height: '100%' }}>
                 <GearOutline size={120} teeth={8} strokeWidth={1.4} />
               </div>
             </div>
+
+            {/* HALO atrás da foto, valoriza o ouro das engrenagens */}
+            <div
+              aria-hidden
+              className="absolute pointer-events-none"
+              style={{
+                top: '12%', left: '50%', transform: 'translateX(-50%)',
+                width: '92%', aspectRatio: '16/9',
+                background: 'radial-gradient(60% 70% at 50% 50%, rgba(245,215,122,.28) 0%, rgba(212,175,55,.08) 50%, transparent 78%)',
+                filter: 'blur(14px)',
+                zIndex: 2,
+              }}
+            />
+
+            {/* FOTO — em primeiro plano, sobre as engrenagens */}
+            <div
+              className="absolute hero-photo-card"
+              style={{
+                top: '14%',
+                left: '50%',
+                transform: 'translateX(-50%) rotate(-1.2deg)',
+                width: '115%',
+                aspectRatio: '16/9',
+                zIndex: 3,
+                background: '#02140E',
+                border: '1px solid rgba(212,175,55,.6)',
+                boxShadow:
+                  '0 28px 60px rgba(0,0,0,.6), 0 0 0 5px rgba(2,15,11,.92), 0 0 0 6px rgba(212,175,55,.45), 0 0 50px rgba(212,175,55,.1)',
+              }}
+            >
+              <img
+                src="/assets/casal-nova.jpg"
+                alt="Ro & Ale Lopes — fundadores Next Level Club"
+                loading="eager"
+                decoding="async"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+              />
+
+              {/* vinheta interna */}
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: 'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(0,0,0,.35) 95%)' }}
+              />
+
+              {/* régua interna fina */}
+              <div
+                aria-hidden
+                className="absolute pointer-events-none"
+                style={{ inset: 8, border: '1px solid rgba(245,215,122,.28)' }}
+              />
+
+              {/* cantos art-deco */}
+              {(['tl', 'tr', 'bl', 'br'] as const).map((p) => {
+                const rot = { tl: 0, tr: 90, br: 180, bl: 270 }[p]
+                const pos: React.CSSProperties = {
+                  tl: { top: -1, left: -1 },
+                  tr: { top: -1, right: -1 },
+                  bl: { bottom: -1, left: -1 },
+                  br: { bottom: -1, right: -1 },
+                }[p]
+                return (
+                  <svg
+                    key={p}
+                    width={32}
+                    height={32}
+                    viewBox="0 0 40 40"
+                    aria-hidden
+                    style={{ position: 'absolute', transform: `rotate(${rot}deg)`, ...pos }}
+                  >
+                    <path d="M0 0 H22 M0 0 V22" stroke="#D4AF37" strokeWidth="1.2" fill="none" />
+                    <path d="M5 5 H18 M5 5 V18" stroke="#F5D77A" strokeWidth="0.8" fill="none" opacity=".85" />
+                    <circle cx="5" cy="5" r="1.4" fill="#F5D77A" />
+                  </svg>
+                )
+              })}
+            </div>
+
+            {/* PLACA DE ASSINATURA — sob a foto, sobre as engrenagens */}
+            <div
+              className="absolute hero-signature"
+              style={{
+                top: 'calc(14% + 56.25% * 0.92 + 12px)',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 4,
+                background: 'linear-gradient(180deg, rgba(11,58,44,.96) 0%, rgba(2,15,11,.96) 100%)',
+                border: '1px solid rgba(212,175,55,.55)',
+                padding: '10px 22px 12px',
+                backdropFilter: 'blur(8px)',
+                boxShadow: '0 14px 32px rgba(0,0,0,.55), inset 0 1px 0 rgba(245,215,122,.14)',
+                textAlign: 'center',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <span style={{ width: 14, height: 1, background: 'var(--gold)' }} />
+                <span style={{ color: 'var(--gold)', fontSize: 7 }}>◆</span>
+                <span style={{ width: 14, height: 1, background: 'var(--gold)' }} />
+              </div>
+              <div className="font-display uppercase gold-text" style={{ fontSize: 14, letterSpacing: '.22em', lineHeight: 1 }}>
+                Ro &amp; Ale Lopes
+              </div>
+              <div style={{ fontSize: 8, letterSpacing: '.32em', textTransform: 'uppercase', color: 'var(--gray)', marginTop: 4 }}>
+                Fundadores · Lopes Group
+              </div>
+            </div>
+
+            {/* LABELS — z-index acima da foto pra continuarem visíveis nas bordas */}
             {[
-              { label: 'Diagnóstico', style: { top: '22%', left: '4%' } },
-              { label: 'Método', style: { top: '48%', right: '4%' } },
-              { label: 'Execução', style: { bottom: '14%', right: '14%' } },
+              { label: 'Diagnóstico', style: { top: '22%', left: '-2%' } },
+              { label: 'Método', style: { top: '48%', right: '-2%' } },
+              { label: 'Execução', style: { bottom: '6%', right: '14%' } },
             ].map(({ label, style }) => (
-              <div key={label} className="absolute hero-label" style={style}>
-                <div className="px-3 py-2 text-[10px] tracking-[.2em] uppercase text-[var(--gold-light)] whitespace-nowrap" style={{ background: 'rgba(2,15,11,.78)', border: '1px solid rgba(212,175,55,.4)', borderRadius: 4 }}>
+              <div key={label} className="absolute hero-label" style={{ ...style, zIndex: 5 }}>
+                <div className="px-3 py-2 text-[10px] tracking-[.2em] uppercase text-[var(--gold-light)] whitespace-nowrap" style={{ background: 'rgba(2,15,11,.86)', border: '1px solid rgba(212,175,55,.5)', borderRadius: 4, backdropFilter: 'blur(6px)' }}>
                   {label}
                 </div>
               </div>

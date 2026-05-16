@@ -2,7 +2,7 @@ import { WhatsappIcon } from '../components/Icons'
 
 const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfYAYKkxqL77oKouH7fsHbCXV10gAREaPlf7GlntEuWnqdVYg/viewform'
 const wppText = 'Olá! Tenho interesse na Mentoria Next Level Club e gostaria de conversar pelo WhatsApp.'
-const wppUrl = 'https://wa.me/?text=' + encodeURIComponent(wppText)
+const wppUrl = 'https://wa.me/5511993110101?text=' + encodeURIComponent(wppText)
 
 export function Aplicacao({ formRef }: { formRef: React.RefObject<HTMLElement> }) {
   return (
@@ -36,7 +36,7 @@ export function Aplicacao({ formRef }: { formRef: React.RefObject<HTMLElement> }
               <a href={wppUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 <WhatsappIcon /> Prefiro falar pelo WhatsApp
               </a>
-              <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="btn-gold">
+              <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="btn-gold" data-sticky-hide>
                 Preencher formulário →
               </a>
             </div>

@@ -19,7 +19,7 @@ export function FinalCTA({ onApply }: { onApply: () => void }) {
         <p className="text-[17px] md:text-[19px] leading-[1.6] text-[var(--gray)] max-w-2xl mx-auto mb-10">
           Aplique agora. As vagas são limitadas e a análise é feita pela equipe das mentoras.
         </p>
-        <button onClick={onApply} className="btn-gold" style={{ padding: '20px 36px', fontSize: 16 }}>
+        <button onClick={onApply} className="btn-gold" style={{ padding: '20px 36px', fontSize: 16 }} data-sticky-hide>
           Aplicar para a mentoria →
         </button>
       </div>

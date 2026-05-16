@@ -271,6 +271,8 @@ img, svg, video { max-width: 100% }
 }
 .section-tag .dot { width: 6px; height: 6px; border-radius: 99px; background: var(--gold); box-shadow: 0 0 8px var(--gold) }
 
+.hero-label { display: none !important }
+
 .photo-frame {
   position: relative;
   background: linear-gradient(180deg, #0B3A2C 0%, #002B20 100%);
@@ -313,19 +315,70 @@ img, svg, video { max-width: 100% }
 @media (max-width: 640px) {
   section[class*="py-24"],
   section[class*="py-32"] { padding-top: 56px; padding-bottom: 56px }
-  .hero-gear-col { max-width: 360px; margin: 16px auto 0 }
-  .hero-label > div { font-size: 9px; padding: 6px 10px; letter-spacing: .18em }
+  .hero-gear-col { max-width: 100%; margin: 28px auto 0; padding: 0 4px }
   .btn-gold { padding: 14px 22px; font-size: 14px }
   .btn-ghost { padding: 13px 20px; font-size: 13px }
   .marquee-track { gap: 32px }
   .card { border-radius: 8px }
   .grid-lines { background-size: 48px 48px }
   .gold-glow { filter: blur(40px) }
+
+  /* ── hero stage vira fluxo vertical no mobile, foto garantida ─────── */
+  .hero-stage {
+    aspect-ratio: auto !important;
+    min-height: 0 !important;
+    padding: 8px 0 0 !important;
+    max-width: 460px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* foto sai do absolute: empilha no fluxo, centralizada e visível */
+  .hero-stage .hero-photo-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: rotate(-1.2deg) !important;
+    width: 92% !important;
+    max-width: 380px;
+    margin: 8px auto 0 !important;
+    aspect-ratio: 16/10 !important;
+    box-shadow:
+      0 18px 38px rgba(0,0,0,.55),
+      0 0 0 4px rgba(2,15,11,.92),
+      0 0 0 5px rgba(212,175,55,.45),
+      0 0 30px rgba(212,175,55,.12) !important;
+  }
+  /* placa de assinatura — em fluxo logo abaixo da foto, ligada visualmente */
+  .hero-stage .hero-signature {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: rotate(-1.2deg) !important;
+    margin: 18px auto 4px !important;
+    padding: 9px 22px 11px !important;
+    display: inline-block;
+  }
+  .hero-stage .hero-signature .font-display { font-size: 12px !important }
+
+  /* labels flutuantes saem no mobile — espaço é precioso */
+  .hero-stage .hero-label { display: none !important }
+
+  /* engrenagens viram pano de fundo difuso atrás da foto, sem competir */
+  .hero-stage > .absolute:not(.hero-photo-card):not(.hero-signature):not(.hero-label) {
+    opacity: .28;
+    pointer-events: none;
+  }
 }
 
 /* ── tablet refinements ─────────────────────────────────────────────── */
 @media (min-width: 641px) and (max-width: 1023px) {
   .hero-gear-col { max-width: 460px; margin: 24px auto 0 }
+}
+
+@media (min-width: 768px) {
+  .hero-gear-col { margin-top: -350px }
 }
 
 /* ── footer + any section must clip absolute decorations ────────────── */
