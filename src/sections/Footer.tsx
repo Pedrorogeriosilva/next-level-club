@@ -48,6 +48,29 @@ export function Footer({ onApply }: { onApply: () => void }) {
             <a href="#" className="hover:text-[var(--gold-light)]">Termos</a>
           </div>
         </div>
+
+        {/* assinatura do desenvolvedor */}
+        <div className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-center gap-x-3 gap-y-2 text-center" style={{ borderTop: '1px solid rgba(212,175,55,.1)' }}>
+          <span className="text-[10px] uppercase tracking-[.32em] text-[var(--muted)]">
+            Desenvolvido por
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <span className="font-display uppercase gold-text" style={{ fontSize: 14, letterSpacing: '.18em' }}>
+              Pedro Rogério
+            </span>
+            <span style={{ color: 'var(--gold)', opacity: .6 }}>·</span>
+            <a
+              href="https://wa.me/5511960396045?text=Olá Pedro! Vi o site Next Level Club e gostaria de falar sobre um projeto."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[12px] tracking-[.06em] text-[var(--gold-light)] hover:text-[var(--warm)] transition"
+              aria-label="WhatsApp Pedro Rogério"
+            >
+              <WhatsappIcon size={14} />
+              <span>(11) 96039-6045</span>
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   )
