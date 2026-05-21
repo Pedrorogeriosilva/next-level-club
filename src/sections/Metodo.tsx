@@ -9,7 +9,7 @@ const motores = [
 
 export function Metodo() {
   return (
-    <section id="metodo" className="relative py-24 md:py-32" style={{ background: 'linear-gradient(180deg,var(--petroleum) 0%,var(--night) 100%)' }}>
+    <section id="metodo" className="relative py-20 md:py-28" style={{ background: 'linear-gradient(180deg,var(--petroleum) 0%,var(--night) 100%)' }}>
       <div className="noise" />
       <div className="grid-lines" />
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">

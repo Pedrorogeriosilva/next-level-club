@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.next-level-club-lp.com.br/sitemap.xml

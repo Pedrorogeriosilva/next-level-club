@@ -55,7 +55,7 @@ function FormatIcon({ k }: { k: IconKey }) {
 
 export function ComoFunciona() {
   return (
-    <section id="formato" className="relative py-24 md:py-32" style={{ background: 'var(--petroleum)' }}>
+    <section id="formato" className="relative py-20 md:py-28" style={{ background: 'var(--petroleum)' }}>
       <div className="noise" />
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-10 mb-16">

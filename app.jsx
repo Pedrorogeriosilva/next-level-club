@@ -51,15 +51,12 @@ function App() {
       <main>
         <Hero onApply={scrollToApply} />
         <Problema />
-        <FalsaIlusao />
         <Metodo />
         <Transformacao />
-        <ComoFunciona />
         <ParaQuem />
         <Mentoras />
         <Aplicacao formRef={formRef} />
         <FAQ />
-        <FinalCTA onApply={scrollToApply} />
         <Footer onApply={scrollToApply} />
       </main>
       <StickyMobileCTA onApply={scrollToApply} />

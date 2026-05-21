@@ -1,15 +1,8 @@
-import { GearOutline } from '../components/GearOutline'
-
 export function FinalCTA({ onApply }: { onApply: () => void }) {
   return (
-    <section className="relative py-20 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg,#0B3A2C 0%,#020F0B 50%,#063D2E 100%)' }}>
+    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: 'linear-gradient(135deg,#0B3A2C 0%,#020F0B 50%,#063D2E 100%)' }}>
       <div className="noise" />
       <div className="grid-lines" />
-      <div className="absolute hide-mobile" style={{ right: -160, top: -100, width: 520, height: 520, opacity: 0.18 }}>
-        <div className="spin-slow" style={{ width: '100%', height: '100%' }}>
-          <GearOutline size={520} teeth={16} strokeWidth={1.2} />
-        </div>
-      </div>
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12 text-center">
         <div className="section-tag mb-6 mx-auto" style={{ display: 'inline-flex' }}><span className="dot"></span>Próximo passo</div>
         <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(36px, 5.6vw, 68px)', lineHeight: 1 }}>

@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react'
 
 const links: [string, string][] = [
   ['Método', 'metodo'],
-  ['Para quem é', 'para-quem'],
-  ['Formato', 'formato'],
   ['Mentoras', 'mentoras'],
-  ['Aplicação', 'aplicacao'],
+  ['Autoridade', 'para-quem'],
 ]
 
 export function Header({ onApply }: { onApply: () => void }) {

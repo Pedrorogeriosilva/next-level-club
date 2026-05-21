@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { GoldStops } from './GoldStops'
-import { GearOutline } from './GearOutline'
 
 interface CircularDiagramProps {
   motores: string[]
@@ -59,11 +58,8 @@ export function CircularDiagram({ motores }: CircularDiagramProps) {
       <circle cx={cx} cy={cy} r={ringR - 50} fill="none" stroke="url(#diagGold)" strokeWidth="0.6" strokeDasharray="1 6" opacity=".35" />
 
       <g transform={`translate(${cx},${cy})`}>
-        <g className="spin-slow">
-          <g transform="translate(-100,-100)">
-            <GearOutline size={200} teeth={12} strokeWidth={1.2} />
-          </g>
-        </g>
+        <circle cx="0" cy="0" r="92" fill="none" stroke="url(#diagGold)" strokeWidth="1" opacity=".55" />
+        <circle cx="0" cy="0" r="72" fill="none" stroke="url(#diagGold)" strokeWidth="0.8" strokeDasharray="2 6" opacity=".4" />
         <text x="0" y="-4" fontFamily="Anton, sans-serif" fontSize="58" fill="url(#diagGold)" letterSpacing="3" textAnchor="middle" dominantBaseline="middle">14</text>
         <text x="0" y="34" fontFamily="Inter, sans-serif" fontSize="12" fill="#F5D77A" letterSpacing="5" textAnchor="middle" dominantBaseline="middle">MOTORES</text>
       </g>

@@ -13,7 +13,6 @@ function Header({ onApply }) {
   const links = [
     ["Método", "metodo"],
     ["Para quem é", "para-quem"],
-    ["Formato", "formato"],
     ["Mentoras", "mentoras"],
     ["Aplicação", "aplicacao"],
   ];
@@ -138,44 +137,20 @@ function Hero({ onApply }) {
         </div>
 
         <div className="md:col-span-5 relative fade-in" style={{ minHeight: 480 }}>
-          <div className="relative w-full" style={{ aspectRatio: "1/1", maxWidth: 540, marginLeft: "auto" }}>
-            {/* Stack of rotating gears + brand mark */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="spin-slow" style={{ width: "100%", height: "100%" }}>
-                <GearOutline size={520} teeth={16} strokeWidth={1.4} />
-              </div>
-            </div>
-            <div className="absolute" style={{ top: "12%", right: "8%", width: 180, height: 180 }}>
-              <div className="spin-slow-rev" style={{ width: "100%", height: "100%" }}>
-                <GearOutline size={180} teeth={10} strokeWidth={1.4} />
-              </div>
-            </div>
-            <div className="absolute" style={{ bottom: "8%", left: "6%", width: 120, height: 120 }}>
-              <div className="spin-slow" style={{ width: "100%", height: "100%" }}>
-                <GearOutline size={120} teeth={8} strokeWidth={1.4} />
-              </div>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div style={{ width: "44%", height: "44%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src="assets/logo-vertical.png" alt="" style={{ width: "100%", height: "auto", filter: "drop-shadow(0 8px 32px rgba(212,175,55,.4))" }} />
-              </div>
-            </div>
-            {/* Floating tick labels */}
-            <div className="absolute" style={{ top: "20%", left: "-4%" }}>
-              <div className="px-3 py-2 text-[10px] tracking-[.2em] uppercase text-[var(--gold-light)]" style={{ background: "rgba(2,15,11,.7)", border: "1px solid rgba(212,175,55,.4)", borderRadius: 4 }}>
-                Diagnóstico
-              </div>
-            </div>
-            <div className="absolute" style={{ top: "50%", right: "-8%" }}>
-              <div className="px-3 py-2 text-[10px] tracking-[.2em] uppercase text-[var(--gold-light)]" style={{ background: "rgba(2,15,11,.7)", border: "1px solid rgba(212,175,55,.4)", borderRadius: 4 }}>
-                Método
-              </div>
-            </div>
-            <div className="absolute" style={{ bottom: "12%", right: "10%" }}>
-              <div className="px-3 py-2 text-[10px] tracking-[.2em] uppercase text-[var(--gold-light)]" style={{ background: "rgba(2,15,11,.7)", border: "1px solid rgba(212,175,55,.4)", borderRadius: 4 }}>
-                Execução
-              </div>
-            </div>
+          <div className="relative w-full flex items-center justify-center" style={{ height: "100%", minHeight: 480 }}>
+            <img
+              src="assets/casal-nova.jpg"
+              alt="Ro &amp; Ale Lopes"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+                display: "block",
+                maskImage: "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -877,26 +852,25 @@ function Footer({ onApply }) {
     <footer className="relative pt-16 pb-32 md:pb-16" style={{ background: "var(--night)", borderTop: "1px solid rgba(212,175,55,.18)" }}>
       <div className="noise" />
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-5">
-            <img src="assets/logo-completo.png" alt="Next Level Club" style={{ height: 64, width: "auto", marginBottom: 24 }} />
+        <div className="grid gap-12 text-center md:grid-cols-[minmax(0,1fr)_180px_180px] md:items-start md:gap-16 md:text-left">
+          <div className="flex flex-col items-center md:items-start">
+            <img src="assets/logo-completo.png" alt="Next Level Club" style={{ height: 46, width: "auto", marginBottom: 30 }} />
             <p className="text-[15px] leading-[1.65] text-[var(--gray)] max-w-md">
               <span className="text-[var(--warm)] font-medium">Crescer não é trabalhar mais.</span> É ativar os motores certos.
             </p>
           </div>
-          <div className="md:col-span-3">
+          <div>
             <div className="text-[11px] uppercase tracking-[.22em] text-[var(--gold-light)] mb-4">Navegar</div>
             <ul className="space-y-2 text-[14px] text-[var(--gray)]">
               <li><a href="#metodo" className="hover:text-[var(--warm)]">Método</a></li>
               <li><a href="#para-quem" className="hover:text-[var(--warm)]">Para quem é</a></li>
-              <li><a href="#formato" className="hover:text-[var(--warm)]">Formato</a></li>
               <li><a href="#mentoras" className="hover:text-[var(--warm)]">Mentoras</a></li>
               <li><a href="#aplicacao" className="hover:text-[var(--warm)]">Aplicação</a></li>
             </ul>
           </div>
-          <div className="md:col-span-4">
+          <div>
             <div className="text-[11px] uppercase tracking-[.22em] text-[var(--gold-light)] mb-4">Conexão</div>
-            <div className="flex gap-3 mb-6">
+            <div className="flex justify-center gap-3 mb-6 md:justify-start">
               <a href="#" aria-label="Instagram" className="text-[var(--gold-light)] hover:text-[var(--warm)] transition p-2.5" style={{ border: "1px solid rgba(212,175,55,.4)", borderRadius: 6 }}><InstagramIcon size={16} /></a>
               <a href="#" aria-label="LinkedIn" className="text-[var(--gold-light)] hover:text-[var(--warm)] transition p-2.5" style={{ border: "1px solid rgba(212,175,55,.4)", borderRadius: 6 }}><LinkedInIcon size={16} /></a>
               <a href="#" aria-label="WhatsApp" className="text-[var(--gold-light)] hover:text-[var(--warm)] transition p-2.5" style={{ border: "1px solid rgba(212,175,55,.4)", borderRadius: 6 }}><WhatsappIcon size={16} /></a>
@@ -919,4 +893,4 @@ function Footer({ onApply }) {
   );
 }
 
-Object.assign(window, { Header, Hero, Problema, FalsaIlusao, Metodo, Transformacao, ComoFunciona, ParaQuem, Mentoras, Aplicacao, FAQ, FinalCTA, Footer });
+Object.assign(window, { Header, Hero, Problema, Metodo, Transformacao, ParaQuem, Mentoras, Aplicacao, FAQ, FinalCTA, Footer });

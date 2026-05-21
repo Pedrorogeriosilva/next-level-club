@@ -19,7 +19,7 @@ const depois = [
 
 export function Transformacao() {
   return (
-    <section className="relative py-24 md:py-32" style={{ background: 'var(--night)' }}>
+    <section className="relative py-20 md:py-28" style={{ background: 'var(--night)' }}>
       <div className="noise" />
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-16 fade-in">

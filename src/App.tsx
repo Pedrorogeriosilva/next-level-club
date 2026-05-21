@@ -2,15 +2,13 @@ import { useEffect, useRef, useState } from 'react'
 import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
 import { Problema } from './sections/Problema'
-import { FalsaIlusao } from './sections/FalsaIlusao'
 import { Metodo } from './sections/Metodo'
 import { Transformacao } from './sections/Transformacao'
-import { ComoFunciona } from './sections/ComoFunciona'
-import { ParaQuem } from './sections/ParaQuem'
 import { Mentoras } from './sections/Mentoras'
-import { Aplicacao } from './sections/Aplicacao'
+import { ParaQuem } from './sections/ParaQuem'
 import { FAQ } from './sections/FAQ'
 import { FinalCTA } from './sections/FinalCTA'
+import { Aplicacao } from './sections/Aplicacao'
 import { Footer } from './sections/Footer'
 import { GoldStops } from './components/GoldStops'
 
@@ -95,16 +93,14 @@ export default function App() {
       <main>
         <Hero onApply={scrollToApply} />
         <Problema />
-        <FalsaIlusao />
         <Metodo />
         <Transformacao />
-        <ComoFunciona />
-        <ParaQuem />
         <Mentoras />
-        <Aplicacao formRef={formRef} />
+        <ParaQuem />
         <FAQ />
         <FinalCTA onApply={scrollToApply} />
-        <Footer onApply={scrollToApply} />
+        <Aplicacao formRef={formRef} />
+        <Footer />
       </main>
       <StickyMobileCTA onApply={scrollToApply} />
     </>

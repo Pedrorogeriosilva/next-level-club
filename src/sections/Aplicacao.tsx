@@ -6,7 +6,7 @@ const wppUrl = 'https://wa.me/5511993110101?text=' + encodeURIComponent(wppText)
 
 export function Aplicacao({ formRef }: { formRef: React.RefObject<HTMLElement> }) {
   return (
-    <section id="aplicacao" ref={formRef as React.RefObject<HTMLElement>} className="relative py-24 md:py-32" style={{ background: 'linear-gradient(180deg,var(--deep) 0%,var(--night) 100%)' }}>
+    <section id="aplicacao" ref={formRef as React.RefObject<HTMLElement>} className="relative py-20 md:py-28" style={{ background: 'linear-gradient(180deg,var(--deep) 0%,var(--night) 100%)' }}>
       <div className="noise" />
       <div className="gold-glow" style={{ width: 500, height: 500, top: '10%', right: '-10%' }} />
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12">
