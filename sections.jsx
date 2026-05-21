@@ -139,7 +139,7 @@ function Hero({ onApply }) {
         <div className="md:col-span-5 relative fade-in" style={{ minHeight: 480 }}>
           <div className="relative w-full flex items-center justify-center" style={{ height: "100%", minHeight: 480 }}>
             <img
-              src="assets/casal-nova.jpg"
+              src="assets/casal-nova01.jpg"
               alt="Ro &amp; Ale Lopes"
               style={{
                 width: "100%",

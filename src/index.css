@@ -307,6 +307,150 @@ img, svg, video { max-width: 100% }
 }
 
 .logo-symbol { height: 52px; width: auto }
+
+/* ─────────── HERO (mobile-first) ─────────── */
+
+/* MOBILE — padrão: foto empilhada no topo, conteúdo embaixo */
+.hero-section {
+  position: relative;
+}
+
+.hero-glow {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(180,140,50,.22) 0%, transparent 65%);
+}
+
+.hero-photo {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 320px;
+  max-height: 460px;
+  z-index: 2;
+}
+
+.hero-photo img,
+.hero-photo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-mobile-photo {
+  display: none;
+}
+
+/* Mobile: enquadramento da foto — mostra o casal centralizado */
+.hero-img { object-position: center 35%; }
+
+@media (min-width: 769px) {
+  .hero-img { object-position: center top; }
+}
+
+@media (max-width: 768px) {
+  .hero-photo {
+    display: none;
+  }
+
+  .hero-mobile-photo {
+    display: block;
+    position: relative;
+    margin: 28px 0 6px;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(212,175,55,.28);
+    background: rgba(2,15,11,.4);
+    box-shadow: 0 18px 45px rgba(0,0,0,.45);
+  }
+
+  .hero-mobile-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(to top, #07080A 0%, transparent 30%),
+      linear-gradient(to bottom, rgba(7,8,10,.35) 0%, transparent 28%);
+  }
+
+  .hero-mobile-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.hero-photo-fade-side {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, transparent 75%, rgba(7,8,10,.4) 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-photo-fade-bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, #07080A 0%, rgba(7,8,10,.7) 40%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  padding: 28px clamp(20px,5vw,32px) 100px;
+  z-index: 10;
+}
+
+/* DESKTOP — foto em bleed lateral à direita, conteúdo full-height à esquerda */
+@media (min-width: 769px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+
+  .hero-glow {
+    left: auto;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: radial-gradient(ellipse 60% 80% at 80% 40%, rgba(180,140,50,.18) 0%, transparent 65%);
+  }
+
+  .hero-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .hero-photo-fade-side {
+    background: linear-gradient(to right, #07080A 0%, rgba(7,8,10,.55) 35%, transparent 65%);
+  }
+
+  .hero-photo-fade-bottom {
+    height: 35%;
+    background: linear-gradient(to top, #07080A 0%, transparent 100%);
+  }
+
+  .hero-content {
+    min-height: 100vh;
+    padding: clamp(100px,12vh,140px) clamp(24px,7vw,96px) clamp(80px,10vh,120px);
+  }
+}
 @media (max-width: 640px) {
   .logo-symbol { height: 42px }
 }

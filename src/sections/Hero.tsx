@@ -2,8 +2,8 @@ export function Hero({ onApply }: { onApply: () => void }) {
   return (
     <section
       id="top"
-      className="relative overflow-hidden"
-      style={{ minHeight: '100vh', background: '#07080A' }}
+      className="hero-section relative overflow-hidden"
+      style={{ background: '#07080A' }}
     >
       {/* Noise texture */}
       <div className="noise" style={{ opacity: 0.4 }} />
@@ -11,49 +11,28 @@ export function Hero({ onApply }: { onApply: () => void }) {
       {/* Ambient glow — atrás da foto */}
       <div
         aria-hidden
-        className="absolute pointer-events-none"
+        className="hero-glow absolute pointer-events-none"
         style={{
-          top: 0, right: 0,
-          width: '55%', height: '100%',
           background: 'radial-gradient(ellipse 60% 80% at 80% 40%, rgba(180,140,50,0.18) 0%, transparent 65%)',
           zIndex: 1,
         }}
       />
 
-      {/* ── FOTO — bleeding para a direita, sem moldura ── */}
-      <div
-        aria-hidden
-        className="absolute"
-        style={{ top: 0, right: 0, bottom: 0, width: '52%', zIndex: 2 }}
-      >
-        {/* gradient esquerda — funde com o fundo */}
-        <div
-          style={{
-            position: 'absolute', inset: 0,
-            background: 'linear-gradient(to right, #07080A 0%, rgba(7,8,10,0.55) 35%, transparent 65%)',
-            zIndex: 3,
-          }}
-        />
-        {/* gradient bottom */}
-        <div
-          style={{
-            position: 'absolute', bottom: 0, left: 0, right: 0, height: '35%',
-            background: 'linear-gradient(to top, #07080A 0%, transparent 100%)',
-            zIndex: 3,
-          }}
-        />
+      {/* ── FOTO — bleed lateral no desktop, topo full-width no mobile ── */}
+      <div aria-hidden className="hero-photo">
+        <div className="hero-photo-fade-side" />
+        <div className="hero-photo-fade-bottom" />
         <picture>
-          <source srcSet="/assets/casal-nova01.webp" type="image/webp" />
           <img
-            src="/assets/casal-nova.jpg"
+            src="/assets/casal-nova01.jpg"
             alt="Ro & Ale Lopes"
             loading="eager"
             decoding="async"
             fetchPriority="high"
+            className="hero-img"
             style={{
               width: '100%', height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center top',
               display: 'block',
             }}
           />
@@ -62,8 +41,8 @@ export function Hero({ onApply }: { onApply: () => void }) {
 
       {/* ── CONTEÚDO ── */}
       <div
-        className="relative flex flex-col justify-center"
-        style={{ minHeight: '100vh', zIndex: 10, padding: 'clamp(100px,12vh,140px) clamp(24px,7vw,96px) clamp(80px,10vh,120px)' }}
+        className="hero-content relative flex flex-col justify-center"
+        style={{ zIndex: 10 }}
       >
         <div style={{ maxWidth: 620 }}>
 
@@ -159,6 +138,15 @@ export function Hero({ onApply }: { onApply: () => void }) {
             <span style={{ color: '#F5D77A', fontWeight: 500 }}>múltiplos caminhos de crescimento</span>{' '}
             — com método, diagnóstico individual e acompanhamento estratégico.
           </p>
+
+          <div className="hero-mobile-photo" aria-hidden>
+            <img
+              src="/assets/casal-nova01.jpg"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+          </div>
 
           {/* Stats */}
           <div
