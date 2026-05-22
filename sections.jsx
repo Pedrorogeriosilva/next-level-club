@@ -178,7 +178,7 @@ function Hero({ onApply }) {
 function Problema() {
   const dores = [
     { n: "01", titulo: "A dor da execução", desc: "Muito esforço, muita operação e pouco crescimento estruturado. O dia vira maratona — o ano não vira escala." },
-    { n: "02", titulo: "O limite do balcão", desc: "O crescimento não acompanha a proporção da operação. A capacidade do canal único vira o teto do negócio." },
+    { n: "02", titulo: `O limite do "balcão"`, desc: "O crescimento não acompanha a proporção da operação. A capacidade do canal único vira o teto do negócio." },
     { n: "03", titulo: "O caos oculto", desc: "Alto faturamento pode esconder baixa previsibilidade, margem espremida e dependência total do dono." },
   ];
   return (

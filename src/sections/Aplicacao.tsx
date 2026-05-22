@@ -12,8 +12,8 @@ export function Aplicacao({ formRef }: { formRef: React.RefObject<HTMLElement> }
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-12 fade-in">
           <div className="section-tag mb-6 mx-auto" style={{ display: 'inline-flex' }}><span className="dot"></span>Processo seletivo</div>
-          <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(36px, 5.2vw, 60px)', lineHeight: 1 }}>
-            <span style={{ color: '#F8F5EC' }}>Aplicação para a </span>
+          <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(36px, 5.2vw, 60px)', lineHeight: 1.15 }}>
+            <span style={{ color: '#F8F5EC' }}>Quero entrar na </span>
             <span className="gold-text">Mentoria Next Level Club.</span>
           </h2>
           <p className="text-[16px] md:text-[17px] leading-[1.65] text-[var(--gray)]">
@@ -23,8 +23,8 @@ export function Aplicacao({ formRef }: { formRef: React.RefObject<HTMLElement> }
 
         <div className="card card-corner p-7 md:p-12 fade-in text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="font-display uppercase text-[28px] md:text-[38px] mb-5" style={{ color: '#F8F5EC', lineHeight: 1.05 }}>
-              Complete sua aplicação no formulário oficial
+            <h3 className="font-display uppercase text-[28px] md:text-[38px] mb-5" style={{ color: '#F8F5EC', lineHeight: 1.18 }}>
+              Preencha o formulário oficial
             </h3>
             <p className="text-[15px] md:text-[17px] leading-[1.65] text-[var(--gray)] mb-8">
               Você será direcionado para o Google Forms em uma nova aba. O preenchimento leva poucos minutos.

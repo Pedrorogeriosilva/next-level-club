@@ -28,10 +28,11 @@ export function ParaQuem() {
           </div>
           <h2
             className="font-display uppercase mb-6"
-            style={{ fontSize: 'clamp(38px, 5.6vw, 68px)', lineHeight: 1.02 }}
+            style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.18 }}
           >
-            <span style={{ color: '#F8F5EC' }}>O círculo em que </span>
-            <span className="gold-text">elas caminham.</span>
+            <span style={{ color: '#F8F5EC' }}>O nível de quem está </span>
+            <span className="gold-text">ao seu lado</span>
+            <span style={{ color: '#F8F5EC' }}>, define o nível que você alcança.</span>
           </h2>
           <div className="hairline mx-auto" style={{ maxWidth: 120 }} />
         </div>
@@ -64,21 +65,31 @@ export function ParaQuem() {
           {/* Texto */}
           <div className="md:col-span-7 fade-in">
             <p
-              className="text-[17px] md:text-[20px] leading-[1.65]"
+              className="text-[16px] md:text-[18px] leading-[1.7]"
               style={{ color: '#E8E4D6' }}
             >
-              Caminham ao lado de nomes como{' '}
-              <span className="gold-text font-medium">Joel Jota</span> e{' '}
-              <span className="gold-text font-medium">Dani Martins</span>, uma das maiores
-              autoridades em vendas do país.
+              Existe uma verdade que poucos falam abertamente no mundo dos negócios: seu crescimento tem o tamanho do <span className="text-[var(--gold-light)]">ambiente que você frequenta</span>.
             </p>
+
             <p
-              className="mt-5 text-[15px] md:text-[17px] leading-[1.7]"
+              className="mt-4 text-[15px] md:text-[17px] leading-[1.7]"
               style={{ color: 'var(--gray)' }}
             >
-              É nesse círculo que refinam decisões, expandem visão de negócio e aplicam,
-              diariamente, as estratégias que sustentam o seu crescimento — e o crescimento de
-              quem é mentorado dentro do <span className="text-[var(--gold-light)]">Next Level Club</span>.
+              A Ro aprendeu isso na prática. Construiu, quebrou e reconstruiu, até entender que resultado consistente não vem só de esforço, mas de estar cercada das pessoas e das referências certas. A Ale chegou à mesma conclusão pelo caminho oposto: vinda do mundo corporativo, entendeu cedo que visão sem ambiente não escala.
+            </p>
+
+            <p
+              className="mt-4 text-[15px] md:text-[17px] leading-[1.7]"
+              style={{ color: 'var(--gray)' }}
+            >
+              Juntas, não foi diferente. O próximo nível de cada uma sempre veio quando o ambiente exigiu mais.
+            </p>
+
+            <p
+              className="mt-4 text-[15px] md:text-[17px] leading-[1.7]"
+              style={{ color: 'var(--gray)' }}
+            >
+              Foi assim que <span className="gold-text font-medium">Joel Jota</span> e <span className="gold-text font-medium">Dani Martins</span> entraram nessa história. Não como convidados, mas como parte do mesmo movimento. Pessoas que operam no mais alto nível, que compartilham o mesmo princípio e que entendem que grandes resultados só se sustentam quando o ambiente ao redor é à altura da ambição.
             </p>
 
             {/* Pills com os nomes */}
@@ -128,6 +139,13 @@ export function ParaQuem() {
               ))}
             </div>
 
+            <p
+              className="mt-8 text-[15px] md:text-[17px] leading-[1.7]"
+              style={{ color: 'var(--gray)' }}
+            >
+              Esse é o princípio que move o <span className="text-[var(--gold-light)]">Next Level Club</span>. Não entregamos só método. Entregamos o ambiente que força você a crescer — porque quando todos ao seu redor operam no próximo nível, estagnar deixa de ser uma opção.
+            </p>
+
             {/* Assinatura */}
             <div
               className="mt-10"
@@ -142,9 +160,7 @@ export function ParaQuem() {
                   color: '#F8F5EC',
                 }}
               >
-                É <span className="gold-text">método</span>,{' '}
-                <span className="gold-text">direção</span> e{' '}
-                <span className="gold-text">aplicação real</span>.
+                Sempre existe um <span className="gold-text">Próximo Nível</span>.
               </p>
             </div>
           </div>

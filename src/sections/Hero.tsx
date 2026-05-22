@@ -47,37 +47,13 @@ export function Hero({ onApply }: { onApply: () => void }) {
         <div style={{ maxWidth: 620 }}>
 
           {/* Badge pill */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 10,
-              padding: '10px 20px',
-              borderRadius: 999,
-              background: 'rgba(212,175,55,0.10)',
-              border: '1px solid rgba(212,175,55,0.38)',
-              fontSize: 11,
-              letterSpacing: '0.26em',
-              textTransform: 'uppercase',
-              color: '#D4AF37',
-              marginBottom: 44,
-              fontWeight: 500,
-            }}
-          >
-            <span
-              style={{
-                width: 7, height: 7,
-                borderRadius: '50%',
-                background: '#D4AF37',
-                boxShadow: '0 0 6px #D4AF37',
-                flexShrink: 0,
-              }}
-            />
+          <div className="hero-badge">
+            <span className="hero-badge-dot" />
             Mentoria Exclusiva para Empresários
           </div>
 
           {/* Título */}
-          <h1 style={{ margin: 0, padding: 0, lineHeight: 1.02 }}>
+          <h1 style={{ margin: 0, padding: 0, lineHeight: 1.1 }}>
             {/* Linha 1 — light, branco */}
             <span
               style={{
@@ -92,21 +68,22 @@ export function Hero({ onApply }: { onApply: () => void }) {
               A Máquina
             </span>
 
-            {/* Linha 2 — italic serif, dourado (nome da marca, dominante) */}
+            {/* Linha 2 — display Anton, dourado (nome da marca, dominante) */}
             <span
               style={{
                 display: 'block',
-                fontFamily: '"Playfair Display", Georgia, serif',
-                fontStyle: 'italic',
-                fontWeight: 700,
-                fontSize: 'clamp(48px, 7.6vw, 100px)',
+                fontFamily: 'Anton, "Bebas Neue", Impact, sans-serif',
+                fontWeight: 400,
+                fontSize: 'clamp(40px, 5.8vw, 76px)',
                 background: 'linear-gradient(135deg, #9C7628 0%, #D4AF37 40%, #F5D77A 65%, #9C7628 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                letterSpacing: '-0.015em',
+                letterSpacing: '0.01em',
                 lineHeight: 1,
                 marginTop: '0.05em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
               }}
             >
               Next Level Club
@@ -134,9 +111,8 @@ export function Hero({ onApply }: { onApply: () => void }) {
               fontWeight: 400,
             }}
           >
-            Uma mentoria para empresários que querem construir uma operação com{' '}
-            <span style={{ color: '#F5D77A', fontWeight: 500 }}>múltiplos caminhos de crescimento</span>{' '}
-            — com método, diagnóstico individual e acompanhamento estratégico.
+            O Next Level Club é o clube de negócios e desenvolvimento empresarial, onde empresários acessam repertório, direcionamento na prática, inseridos em um ecossistema que estimula{' '}
+            <span style={{ color: '#F5D77A', fontWeight: 500 }}>execução, visão e maturidade empresarial</span>. Transformamos conhecimento em ação, ação em resultado de alta performance.
           </p>
 
           <div className="hero-mobile-photo" aria-hidden>
@@ -146,51 +122,6 @@ export function Hero({ onApply }: { onApply: () => void }) {
               loading="eager"
               decoding="async"
             />
-          </div>
-
-          {/* Stats */}
-          <div
-            style={{
-              marginTop: 36,
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '10px 28px',
-            }}
-          >
-            {[
-              ['2x', 'Encontros presenciais/ano'],
-              ['1:1', 'Diagnóstico com Ro & Ale Lopes'],
-              ['Turma', 'Com vagas limitadas'],
-            ].map(([n, t]) => (
-              <div key={n} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span
-                  style={{
-                    fontFamily: '"Playfair Display", Georgia, serif',
-                    fontStyle: 'italic',
-                    fontWeight: 700,
-                    fontSize: 28,
-                    background: 'linear-gradient(135deg, #9C7628, #D4AF37, #F5D77A)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    lineHeight: 1,
-                  }}
-                >
-                  {n}
-                </span>
-                <span
-                  style={{
-                    fontSize: 11,
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    color: '#6F756F',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {t}
-                </span>
-              </div>
-            ))}
           </div>
 
           {/* Botões */}

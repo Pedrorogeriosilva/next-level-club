@@ -408,8 +408,69 @@ img, svg, video { max-width: 100% }
 
 .hero-content {
   position: relative;
-  padding: 28px clamp(20px,5vw,32px) 100px;
+  padding: 110px clamp(20px,5vw,32px) 100px;
   z-index: 10;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(212,175,55,0.10);
+  border: 1px solid rgba(212,175,55,0.38);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 44px;
+  font-weight: 500;
+  max-width: 100%;
+  white-space: nowrap;
+  width: fit-content;
+  line-height: 1;
+}
+
+.hero-badge-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #D4AF37;
+  box-shadow: 0 0 6px #D4AF37;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-badge {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    padding: 9px 14px;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .hero-badge-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-badge {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    padding: 8px 12px;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero-badge {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    padding: 7px 10px;
+  }
 }
 
 /* DESKTOP — foto em bleed lateral à direita, conteúdo full-height à esquerda */

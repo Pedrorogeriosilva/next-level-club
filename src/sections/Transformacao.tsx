@@ -24,7 +24,7 @@ export function Transformacao() {
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-16 fade-in">
           <div className="section-tag mb-6"><span className="dot"></span>Transformação</div>
-          <h2 className="font-display uppercase" style={{ fontSize: 'clamp(36px, 5.6vw, 68px)', lineHeight: 1 }}>
+          <h2 className="font-display uppercase" style={{ fontSize: 'clamp(36px, 5.6vw, 68px)', lineHeight: 1.15 }}>
             <span style={{ color: '#F8F5EC' }}>De uma operação dependente para uma </span>
             <span className="gold-text">máquina de crescimento.</span>
           </h2>

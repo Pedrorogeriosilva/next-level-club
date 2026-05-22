@@ -1,10 +1,10 @@
 import { CircularDiagram } from '../components/CircularDiagram'
 
 const motores = [
-  'Loja Física', 'Base de Clientes', 'Indicação / Referidos', 'Venda Ativa',
-  'Parcerias Estratégicas', 'Grêmio / Vendas em Empresas', 'B2B Corporativo', 'Kits e Combos',
-  'Personalizados', 'Datas Sazonais', 'Eventos', 'Omnicanalidade',
-  'Upsell / Cross-sell', 'Novas Ofertas',
+  'Quebra de mentalidade', 'Choque da realidade financeira', 'Desapego do "balcão"', 'Meta inteligente',
+  'Planejamento reverso', 'Sistema de controle', 'Processualização', 'Omnicanalidade',
+  'Criação de demanda', 'Posicionamento', 'Adaptabilidade estratégica', 'Gestão de relacionamento',
+  'Gestão de pessoas e cultura', 'Mentalidade de crescimento contínuo',
 ]
 
 export function Metodo() {
@@ -15,13 +15,13 @@ export function Metodo() {
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
           <div className="section-tag mb-6 mx-auto" style={{ display: 'inline-flex' }}><span className="dot"></span>O método proprietário</div>
-          <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(40px, 6.4vw, 80px)', lineHeight: 1 }}>
+          <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(40px, 6.4vw, 80px)', lineHeight: 1.15 }}>
             <span style={{ color: '#F8F5EC' }}>Os </span><span className="gold-text">14 Motores</span><br />
             <span style={{ color: '#F8F5EC' }}>de Faturamento</span>
           </h2>
           <div className="hairline my-6 mx-auto" style={{ maxWidth: 120 }}></div>
           <p className="text-[17px] md:text-[19px] leading-[1.6] text-[var(--gray)]">
-            O método que mostra onde estão as <span className="text-[var(--gold-light)]">oportunidades escondidas</span> dentro do seu próprio negócio.
+            Trabalhamos com a premissa de que educação empresarial não se resume a conteúdo, mas sim a um <span className="text-[var(--gold-light)]">sistema que une método, ambiente e prática</span>.
           </p>
         </div>
 
@@ -38,11 +38,6 @@ export function Metodo() {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto mt-16 text-center fade-in">
-          <p className="text-[16px] md:text-[18px] leading-[1.65] text-[var(--gray)] italic">
-            "A proposta não é criar complexidade. É enxergar o negócio como uma máquina — cada motor precisa ter <span className="text-[var(--gold-light)] not-italic font-medium">função, direção, ritmo e acompanhamento</span>."
-          </p>
-        </div>
       </div>
     </section>
   )

@@ -18,7 +18,7 @@ export function FAQ() {
         <div className="grid md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-4 fade-in md:sticky md:top-32">
             <div className="section-tag mb-6"><span className="dot"></span>Perguntas frequentes</div>
-            <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(36px, 4.6vw, 56px)', lineHeight: 1 }}>
+            <h2 className="font-display uppercase mb-6" style={{ fontSize: 'clamp(36px, 4.6vw, 56px)', lineHeight: 1.15 }}>
               <span style={{ color: '#F8F5EC' }}>Dúvidas</span><br />
               <span className="gold-text">frequentes.</span>
             </h2>

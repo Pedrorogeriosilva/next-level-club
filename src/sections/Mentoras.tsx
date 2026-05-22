@@ -13,8 +13,8 @@ type Mentora = {
 const mentoras: Mentora[] = [
   {
     nome: 'Ro Lopes',
-    cargo: 'Empresária, CEO & Founder do LOPESGROUP',
-    bio: 'Empresária com operação real e foco em crescimento estruturado.',
+    cargo: 'Empresária, CEO & Founder da LOPES GROUP',
+    bio: 'Empreendedora há mais de 35 anos, é CEO e Founder da Lopes Group, presidente do conselho de franqueados da Cacau Show e a número 1 em faturamento da Cacau Show a nível Brasil. Sua atuação representa o eixo de execução e construção prática, com foco em movimento, ação e mentalidade empresarial.',
     instagram: 'https://www.instagram.com/rolopescs/',
     linkedin: 'https://www.linkedin.com/in/rosangela-lopes-00419812a/',
     photo: '/assets/ro.png',
@@ -22,8 +22,8 @@ const mentoras: Mentora[] = [
   },
   {
     nome: 'Ale Lopes',
-    cargo: 'Empresária & Co-Founder da LOPESGROUP',
-    bio: 'Responsável pela estrutura e estratégia de crescimento da operação.',
+    cargo: 'Estrategista & Co-Founder da LOPES GROUP',
+    bio: 'Estrategista de negócios e co-founder da Lopes Group, possui trajetória consolidada em empresas como Coca-Cola, Bunge, JBS e Cacau Show, com mais de 15 anos de experiência no mercado corporativo. Ale atua como eixo de estratégia e performance, conduzindo direcionamento, método e estruturação, traduzindo visão em planejamento aplicável e rotina de evolução.',
     instagram: 'https://www.instagram.com/alelopes2404/',
     linkedin: 'https://www.linkedin.com/in/alessandra-mouraa/',
     photo: '/assets/ale.png',
@@ -50,7 +50,7 @@ export function Mentoras() {
           </div>
           <h2
             className="font-display uppercase mb-4"
-            style={{ fontSize: 'clamp(32px, 4.4vw, 52px)', lineHeight: 1.02 }}
+            style={{ fontSize: 'clamp(32px, 4.4vw, 52px)', lineHeight: 1.15 }}
           >
             <span style={{ color: '#F8F5EC' }}>Com quem você vai </span>
             <span className="gold-text">caminhar.</span>

@@ -61,7 +61,7 @@ export function ComoFunciona() {
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           <div className="md:col-span-7">
             <div className="section-tag mb-6"><span className="dot"></span>Como funciona</div>
-            <h2 className="font-display uppercase" style={{ fontSize: 'clamp(36px, 5.4vw, 64px)', lineHeight: 1.02 }}>
+            <h2 className="font-display uppercase" style={{ fontSize: 'clamp(36px, 5.4vw, 64px)', lineHeight: 1.15 }}>
               <span style={{ color: '#F8F5EC' }}>Um formato criado para empresários que precisam de </span>
               <span className="gold-text">estratégia e execução.</span>
             </h2>

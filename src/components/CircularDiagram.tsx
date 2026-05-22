@@ -37,7 +37,7 @@ export function CircularDiagram({ motores }: CircularDiagramProps) {
   return (
     <svg
       ref={ref}
-      viewBox={`-180 -20 ${size + 360} ${size + 40}`}
+      viewBox={`-180 -50 ${size + 360} ${size + 100}`}
       className="w-full h-auto"
       xmlns="http://www.w3.org/2000/svg"
       style={{ overflow: 'visible' }}
@@ -72,7 +72,7 @@ export function CircularDiagram({ motores }: CircularDiagramProps) {
         const yInner = cy + Math.sin(a) * 140
         const xLine = cx + Math.cos(a) * (ringR - 26)
         const yLine = cy + Math.sin(a) * (ringR - 26)
-        const labelR = ringR + 44
+        const labelR = ringR + 55
         const lx = cx + Math.cos(a) * labelR
         const ly = cy + Math.sin(a) * labelR
         const anchor = Math.cos(a) > 0.2 ? 'start' : Math.cos(a) < -0.2 ? 'end' : 'middle'

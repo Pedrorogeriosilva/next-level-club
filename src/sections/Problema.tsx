@@ -1,6 +1,6 @@
 const dores = [
-  { n: '01', titulo: 'A dor da execução', desc: 'Muito esforço, muita operação e pouco crescimento estruturado. O dia vira maratona — o ano não vira escala.' },
-  { n: '02', titulo: 'O limite do balcão', desc: 'O crescimento não acompanha a proporção da operação. A capacidade do canal único vira o teto do negócio.' },
+  { n: '01', titulo: 'A dor da execução', desc: 'O negócio ainda depende de cada decisão sua. Muito esforço. Muito braço. Pouca escala.' },
+  { n: '02', titulo: `O limite do "balcão"`, desc: 'O crescimento não acompanha a proporção da operação. Quem depende de um único canal, depende de um único teto. O negócio cresce até onde o canal permite, e para.' },
   { n: '03', titulo: 'O caos oculto', desc: 'Alto faturamento pode esconder baixa previsibilidade, margem espremida e dependência total do dono.' },
 ]
 
@@ -11,7 +11,7 @@ export function Problema() {
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="mb-16">
           <div className="section-tag mb-6"><span className="dot"></span>Diagnóstico do mercado</div>
-          <h2 className="font-display uppercase" style={{ fontSize: 'clamp(40px, 6vw, 76px)', lineHeight: 1 }}>
+          <h2 className="font-display uppercase" style={{ fontSize: 'clamp(40px, 6vw, 76px)', lineHeight: 1.15 }}>
             <span className="gold-text">O jogo</span><br />
             <span style={{ color: '#F8F5EC' }}>mudou.</span>
           </h2>
