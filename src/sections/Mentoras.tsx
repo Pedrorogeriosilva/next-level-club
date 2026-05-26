@@ -14,7 +14,7 @@ const mentoras: Mentora[] = [
   {
     nome: 'Ro Lopes',
     cargo: 'Empresária, CEO & Founder da LOPES GROUP',
-    bio: 'Empreendedora há mais de 35 anos, é CEO e Founder da Lopes Group, presidente do conselho de franqueados da Cacau Show e a número 1 em faturamento da Cacau Show a nível Brasil. Sua atuação representa o eixo de execução e construção prática, com foco em movimento, ação e mentalidade empresarial.',
+    bio: 'Empreendedora há mais de 35 anos, é CEO e Founder da Lopes Group, presidente do conselho de franqueados da Cacau Show e a número 1 em faturamento da rede a nível Brasil. Sua atuação representa o eixo de execução e construção prática, com foco em movimento, ação e mentalidade empresarial.',
     instagram: 'https://www.instagram.com/rolopescs/',
     linkedin: 'https://www.linkedin.com/in/rosangela-lopes-00419812a/',
     photo: '/assets/ro.png',

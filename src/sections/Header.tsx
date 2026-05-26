@@ -4,6 +4,7 @@ const links: [string, string][] = [
   ['Método', 'metodo'],
   ['Mentoras', 'mentoras'],
   ['Autoridade', 'para-quem'],
+  ['Dúvidas', 'duvidas'],
 ]
 
 export function Header({ onApply }: { onApply: () => void }) {

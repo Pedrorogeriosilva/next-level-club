@@ -2,6 +2,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
   return (
     <section
       id="top"
+      data-sticky-hide
       className="hero-section relative overflow-hidden"
       style={{ background: '#07080A' }}
     >
@@ -18,7 +19,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
         }}
       />
 
-      {/* ── FOTO — bleed lateral no desktop, topo full-width no mobile ── */}
+      {/* ── FOTO — bleed lateral no desktop ── */}
       <div aria-hidden className="hero-photo">
         <div className="hero-photo-fade-side" />
         <div className="hero-photo-fade-bottom" />
@@ -39,6 +40,22 @@ export function Hero({ onApply }: { onApply: () => void }) {
         </picture>
       </div>
 
+      {/* ── MOBILE: foto em primeiro plano com badge sobreposta ── */}
+      <div className="hero-mobile-hero">
+        <img
+          src="/assets/casal-nova01.jpg"
+          alt="Ro & Ale Lopes"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+        <div className="hero-mobile-hero-fade" aria-hidden />
+        <div className="hero-mobile-hero-badge">
+          <span className="hero-badge-dot" />
+          Mentoria Exclusiva para Empresários
+        </div>
+      </div>
+
       {/* ── CONTEÚDO ── */}
       <div
         className="hero-content relative flex flex-col justify-center"
@@ -46,8 +63,8 @@ export function Hero({ onApply }: { onApply: () => void }) {
       >
         <div style={{ maxWidth: 620 }}>
 
-          {/* Badge pill */}
-          <div className="hero-badge">
+          {/* Badge pill — desktop only (mobile usa badge sobreposta na foto) */}
+          <div className="hero-badge hero-badge--desktop">
             <span className="hero-badge-dot" />
             Mentoria Exclusiva para Empresários
           </div>
@@ -112,17 +129,8 @@ export function Hero({ onApply }: { onApply: () => void }) {
             }}
           >
             O Next Level Club é o clube de negócios e desenvolvimento empresarial, onde empresários acessam repertório, direcionamento na prática, inseridos em um ecossistema que estimula{' '}
-            <span style={{ color: '#F5D77A', fontWeight: 500 }}>execução, visão e maturidade empresarial</span>. Transformamos conhecimento em ação, ação em resultado de alta performance.
+            <span style={{ color: '#F5D77A', fontWeight: 500 }}>execução, visão e maturidade empresarial</span>. Transformamos conhecimento em ação e ação em resultado de alta performance.
           </p>
-
-          <div className="hero-mobile-photo" aria-hidden>
-            <img
-              src="/assets/casal-nova01.jpg"
-              alt=""
-              loading="eager"
-              decoding="async"
-            />
-          </div>
 
           {/* Botões */}
           <div style={{ marginTop: 44, display: 'flex', flexWrap: 'wrap', gap: 14 }}>
@@ -130,7 +138,6 @@ export function Hero({ onApply }: { onApply: () => void }) {
               id="hero-apply-btn"
               onClick={onApply}
               className="btn-gold"
-              data-sticky-hide
             >
               Quero aplicar para a mentoria
             </button>

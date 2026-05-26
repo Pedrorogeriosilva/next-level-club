@@ -6,6 +6,7 @@ const navLinks = [
   ['Método', '#metodo'],
   ['Mentoras', '#mentoras'],
   ['Autoridade', '#para-quem'],
+  ['Dúvidas', '#duvidas'],
 ] as const
 
 export function Footer() {

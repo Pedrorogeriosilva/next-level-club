@@ -12,7 +12,7 @@ export function FAQ() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="relative py-20 md:py-28" style={{ background: 'var(--petroleum)' }}>
+    <section id="duvidas" className="relative py-20 md:py-28" style={{ background: 'var(--petroleum)' }}>
       <div className="noise" />
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-10 items-start">
