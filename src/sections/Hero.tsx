@@ -112,7 +112,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
             style={{
               marginTop: 32, marginBottom: 28,
               height: 1,
-              maxWidth: 360,
+              maxWidth: 360, // laele papai
               background: 'linear-gradient(90deg, rgba(212,175,55,0.55), transparent)',
             }}
           />
