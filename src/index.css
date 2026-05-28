@@ -382,11 +382,10 @@ img, svg, video { max-width: 100% }
 
   .hero-mobile-hero img {
     width: 100%;
-    height: calc(100% + 36px);
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: center top;
-    transform: translateY(36px);
   }
 
   /* Fade do fundo escuro vindo de baixo pra fundir com o conteúdo */
