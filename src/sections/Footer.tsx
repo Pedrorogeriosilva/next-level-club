@@ -16,12 +16,17 @@ export function Footer() {
     <footer className="relative pt-16 pb-32 md:pb-16" style={{ background: 'var(--night)', borderTop: '1px solid rgba(212,175,55,.18)' }}>
       <div className="noise" />
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="grid gap-12 text-center md:grid-cols-[minmax(0,1fr)_180px_180px] md:items-start md:gap-16 md:text-left">
-          <div className="flex flex-col items-center md:items-start">
-            <img src="/assets/logo-completo.png" alt="Next Level Club" width={220} height={64} loading="lazy" decoding="async" style={{ height: 46, width: 'auto', marginBottom: 30 }} />
-            <p className="text-[15px] leading-[1.65] text-[var(--gray)] max-w-md">
-              <span className="text-[var(--warm)] font-medium">Crescer não é trabalhar mais.</span> É ativar os motores certos.
-            </p>
+        <div className="grid gap-12 text-center md:grid-cols-[minmax(280px,1fr)_180px_180px] md:items-start md:gap-16 md:text-left">
+          <div className="flex items-center justify-center md:justify-start">
+            <img
+              src="/assets/logo-completo.png"
+              alt="Next Level Club"
+              width={260}
+              height={104}
+              loading="lazy"
+              decoding="async"
+              style={{ width: 260, height: 104, objectFit: 'cover', objectPosition: 'center' }}
+            />
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-[.22em] text-[var(--gold-light)] mb-4">Navegar</div>
@@ -44,7 +49,16 @@ export function Footer() {
         <div className="hairline my-10"></div>
 
         <div className="flex flex-col md:flex-row md:justify-between gap-4 text-[12px] uppercase tracking-[.18em] text-[var(--muted)]">
-          <div>© {new Date().getFullYear()} Next Level Club · Lopes Group</div>
+          <img
+            src="/assets/LOGO.png"
+            alt={`© ${new Date().getFullYear()} Next Level Club · Lopes Group`}
+            width={430}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto max-w-full md:mx-0"
+            style={{ width: 'min(430px, 100%)', height: 'auto' }}
+          />
           <div className="flex gap-6">
             <button
               type="button"

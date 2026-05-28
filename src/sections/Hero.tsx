@@ -4,7 +4,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
       id="top"
       data-sticky-hide
       className="hero-section relative overflow-hidden"
-      style={{ background: '#07080A' }}
+      style={{ background: '#01180e' }}
     >
       {/* Noise texture */}
       <div className="noise" style={{ opacity: 0.4 }} />
@@ -71,12 +71,12 @@ export function Hero({ onApply }: { onApply: () => void }) {
 
           {/* Título */}
           <h1 style={{ margin: 0, padding: 0, lineHeight: 1.1 }}>
-            {/* Linha 1 — light, branco */}
+            {/* Linha 1 — mesmo Inter do parágrafo, branco */}
             <span
               style={{
                 display: 'block',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: 'clamp(38px, 5.6vw, 72px)',
                 color: '#F8F5EC',
                 letterSpacing: '-0.02em',

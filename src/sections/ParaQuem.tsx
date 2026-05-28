@@ -38,7 +38,7 @@ export function ParaQuem() {
         </div>
 
         {/* Conteúdo principal */}
-        <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-start">
           {/* Foto editorial */}
           <div className="md:col-span-5 fade-in">
             <div
