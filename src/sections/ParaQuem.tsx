@@ -100,7 +100,7 @@ export function ParaQuem() {
                   className="flex items-center gap-3"
                   style={{
                     padding: '12px 18px',
-                    background: 'rgba(2,15,11,.7)',
+                    background: 'rgba(1,11,9,.7)',
                     border: '1px solid rgba(212,175,55,.35)',
                     borderRadius: 999,
                     backdropFilter: 'blur(6px)',

@@ -36,7 +36,7 @@ export function LegalModal({ doc, onClose }: LegalModalProps) {
       onClick={onClose}
       className="fixed inset-0 z-[100] flex items-center justify-center"
       style={{
-        background: 'rgba(2,15,11,.78)',
+        background: 'rgba(1,11,9,.78)',
         backdropFilter: 'blur(8px)',
         padding: '24px 16px',
       }}
@@ -58,7 +58,7 @@ export function LegalModal({ doc, onClose }: LegalModalProps) {
         {/* Header */}
         <div
           className="flex items-center justify-between px-6 md:px-10 py-5"
-          style={{ borderBottom: '1px solid rgba(212,175,55,.22)', background: 'rgba(2,15,11,.6)' }}
+          style={{ borderBottom: '1px solid rgba(212,175,55,.22)', background: 'rgba(1,11,9,.6)' }}
         >
           <div>
             <div

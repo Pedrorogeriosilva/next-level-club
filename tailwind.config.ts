@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        night: '#020F0B',
-        petroleum: '#002B20',
-        deep: '#063D2E',
-        machine: '#0B3A2C',
+        night: '#010B09',
+        petroleum: '#042117',
+        deep: '#113929',
+        machine: '#113929',
+        brown: '#35170E',
         gold: '#D4AF37',
         goldLight: '#F5D77A',
         goldDark: '#9C7628',

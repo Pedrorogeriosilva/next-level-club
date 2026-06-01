@@ -1,6 +1,6 @@
 export function FinalCTA({ onApply }: { onApply: () => void }) {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: 'linear-gradient(135deg,#0B3A2C 0%,#020F0B 50%,#063D2E 100%)' }}>
+    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: 'linear-gradient(135deg,#113929 0%,#010B09 50%,#042117 100%)' }}>
       <div className="noise" />
       <div className="grid-lines" />
       <div className="relative max-w-[1100px] mx-auto px-6 md:px-12 text-center">

@@ -1,9 +1,10 @@
 /* === NEXT LEVEL CLUB — base styles === */
 :root{
-  --night:#020F0B;
-  --petroleum:#002B20;
-  --deep:#063D2E;
-  --machine:#0B3A2C;
+  --night:#010B09;
+  --petroleum:#042117;
+  --deep:#113929;
+  --machine:#113929;
+  --brown:#35170E;
   --gold:#D4AF37;
   --gold-light:#F5D77A;
   --gold-dark:#9C7628;
@@ -63,7 +64,7 @@ body{
 /* Premium card */
 .card{
   position:relative;
-  background:linear-gradient(180deg,rgba(11,58,44,.78) 0%,rgba(2,43,32,.86) 100%);
+  background:linear-gradient(180deg,rgba(17,57,41,.78) 0%,rgba(4,33,23,.86) 100%);
   border:1px solid rgba(212,175,55,.32);
   border-radius:10px;
   box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(245,215,122,.08);
@@ -171,7 +172,7 @@ body{
 /* Photo wrapper for mentoras */
 .photo-frame{
   position:relative;
-  background:linear-gradient(180deg,#0B3A2C 0%,#002B20 100%);
+  background:linear-gradient(180deg,#113929 0%,#042117 100%);
   border:1px solid rgba(212,175,55,.4);
   border-radius:10px;
   overflow:hidden;

@@ -4,10 +4,11 @@
 
 /* === NEXT LEVEL CLUB — base styles === */
 :root {
-  --night: #020F0B;
-  --petroleum: #002B20;
-  --deep: #063D2E;
-  --machine: #0B3A2C;
+  --night: #010B09;
+  --petroleum: #042117;
+  --deep: #113929;
+  --machine: #113929;
+  --brown: #35170E;
   --gold: #D4AF37;
   --gold-light: #F5D77A;
   --gold-dark: #9C7628;
@@ -84,7 +85,7 @@ img, svg, video { max-width: 100% }
 
 .card {
   position: relative;
-  background: linear-gradient(180deg, rgba(11,58,44,.78) 0%, rgba(2,43,32,.86) 100%);
+  background: linear-gradient(180deg, rgba(17,57,41,.78) 0%, rgba(4,33,23,.86) 100%);
   border: 1px solid rgba(212,175,55,.32);
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(245,215,122,.08);
@@ -212,7 +213,7 @@ img, svg, video { max-width: 100% }
 .mobile-menu-panel {
   max-height: 0;
   overflow: hidden;
-  background: rgba(2,15,11,.96);
+  background: rgba(1,11,9,.96);
   border-top: 1px solid rgba(212,175,55,0);
   opacity: 0;
   transform: translateY(-8px);
@@ -275,7 +276,7 @@ img, svg, video { max-width: 100% }
 
 .photo-frame {
   position: relative;
-  background: linear-gradient(180deg, #0B3A2C 0%, #002B20 100%);
+  background: linear-gradient(180deg, #113929 0%, #042117 100%);
   border: 1px solid rgba(212,175,55,.4);
   border-radius: 10px;
   overflow: hidden;
@@ -395,10 +396,10 @@ img, svg, video { max-width: 100% }
     pointer-events: none;
     background:
       linear-gradient(to bottom,
-        rgba(7,8,10,0) 0%,
-        rgba(7,8,10,0) 55%,
-        rgba(7,8,10,.55) 78%,
-        #07080A 100%);
+        rgba(1,11,9,0) 0%,
+        rgba(1,11,9,0) 55%,
+        rgba(1,11,9,.55) 78%,
+        #010B09 100%);
   }
 
   /* Badge sobreposta — sentada na parte de baixo da foto */
@@ -454,7 +455,7 @@ img, svg, video { max-width: 100% }
 .hero-photo-fade-side {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 0%, transparent 75%, rgba(2,15,11,.4) 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 75%, rgba(1,11,9,.4) 100%);
   z-index: 3;
   pointer-events: none;
 }
@@ -463,7 +464,7 @@ img, svg, video { max-width: 100% }
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 40%;
-  background: linear-gradient(to top, var(--night) 0%, rgba(2,15,11,.7) 40%, transparent 100%);
+  background: linear-gradient(to top, var(--night) 0%, rgba(1,11,9,.7) 40%, transparent 100%);
   z-index: 3;
   pointer-events: none;
 }
@@ -566,7 +567,7 @@ img, svg, video { max-width: 100% }
 
   .hero-photo-fade-bottom {
     height: 22%;
-    background: linear-gradient(to top, var(--night) 0%, rgba(2,15,11,0.35) 35%, transparent 100%);
+    background: linear-gradient(to top, var(--night) 0%, rgba(1,11,9,0.35) 35%, transparent 100%);
   }
 
   .hero-content {
@@ -612,7 +613,7 @@ img, svg, video { max-width: 100% }
     aspect-ratio: 16/10 !important;
     box-shadow:
       0 18px 38px rgba(0,0,0,.55),
-      0 0 0 4px rgba(2,15,11,.92),
+      0 0 0 4px rgba(1,11,9,.92),
       0 0 0 5px rgba(212,175,55,.45),
       0 0 30px rgba(212,175,55,.12) !important;
   }

@@ -31,8 +31,8 @@ export function Transformacao() {
         </div>
 
         <div className="grid md:grid-cols-[1fr_60px_1fr] gap-6 items-stretch">
-          <div className="card p-7 md:p-9 relative" style={{ background: 'linear-gradient(180deg,rgba(20,20,20,.55) 0%,rgba(2,15,11,.85) 100%)', borderColor: 'rgba(216,113,113,.25)' }}>
-            <div className="text-[11px] tracking-[.32em] uppercase text-[#D87171] mb-2">Antes</div>
+          <div className="card p-7 md:p-9 relative" style={{ background: 'linear-gradient(180deg,rgba(53,23,14,.22) 0%,rgba(1,11,9,.88) 100%)', borderColor: 'rgba(53,23,14,.55)' }}>
+            <div className="text-[11px] tracking-[.32em] uppercase mb-2" style={{ color: '#C48A6A' }}>Antes</div>
             <h3 className="font-display uppercase text-[28px] md:text-[34px] mb-6" style={{ color: '#D8D8D8' }}>Operação dependente</h3>
             <ul className="space-y-4">
               {antes.map((t, i) => (
@@ -56,7 +56,7 @@ export function Transformacao() {
             </div>
           </div>
 
-          <div className="card card-corner p-7 md:p-9 relative" style={{ background: 'linear-gradient(180deg,rgba(11,58,44,.95) 0%,rgba(2,43,32,.95) 100%)' }}>
+          <div className="card card-corner p-7 md:p-9 relative" style={{ background: 'linear-gradient(180deg,rgba(17,57,41,.95) 0%,rgba(4,33,23,.95) 100%)' }}>
             <div className="text-[11px] tracking-[.32em] uppercase text-[var(--gold-light)] mb-2">Depois</div>
             <h3 className="font-display uppercase text-[28px] md:text-[34px] mb-6 gold-text">Máquina de crescimento</h3>
             <ul className="space-y-4">

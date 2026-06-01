@@ -21,7 +21,7 @@ export function Header({ onApply }: { onApply: () => void }) {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        background: scrolled ? 'rgba(2,15,11,.88)' : 'rgba(2,15,11,.35)',
+        background: scrolled ? 'rgba(1,11,9,.88)' : 'rgba(1,11,9,.35)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
         borderBottom: scrolled ? '1px solid rgba(212,175,55,.25)' : '1px solid rgba(212,175,55,.08)',

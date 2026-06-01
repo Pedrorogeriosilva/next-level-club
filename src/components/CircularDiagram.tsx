@@ -99,7 +99,7 @@ export function CircularDiagram({ motores }: CircularDiagramProps) {
                 transition: `transform 420ms cubic-bezier(.34,1.56,.64,1) ${delay}`,
               }}
             >
-              <circle cx={x} cy={y} r="26" fill="rgba(2,15,11,0.95)" stroke="url(#diagGold)" strokeWidth="1.4" />
+              <circle cx={x} cy={y} r="26" fill="rgba(1,11,9,0.95)" stroke="url(#diagGold)" strokeWidth="1.4" />
               <text x={x} y={y} fontFamily="Anton, sans-serif" fontSize="22" fill="url(#diagGold)" textAnchor="middle" dominantBaseline="middle">
                 {String(i + 1).padStart(2, '0')}
               </text>

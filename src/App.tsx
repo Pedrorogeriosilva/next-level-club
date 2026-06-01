@@ -42,7 +42,7 @@ function StickyMobileCTA({ onApply }: { onApply: () => void }) {
       className="only-mobile fixed bottom-0 left-0 right-0 z-40 mobile-cta"
       style={{
         padding: '12px 16px calc(12px + env(safe-area-inset-bottom, 0px))',
-        background: 'linear-gradient(180deg,rgba(2,15,11,.85),rgba(2,15,11,.98))',
+        background: 'linear-gradient(180deg,rgba(1,11,9,.85),rgba(1,11,9,.98))',
         borderTop: '1px solid rgba(212,175,55,.3)',
         backdropFilter: 'blur(10px)',
         transform: visible ? 'translateY(0)' : 'translateY(110%)',

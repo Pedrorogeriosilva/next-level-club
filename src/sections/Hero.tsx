@@ -4,7 +4,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
       id="top"
       data-sticky-hide
       className="hero-section relative overflow-hidden"
-      style={{ background: '#01180e' }}
+      style={{ background: '#021510' }}
     >
       {/* Noise texture */}
       <div className="noise" style={{ opacity: 0.4 }} />
@@ -156,7 +156,7 @@ export function Hero({ onApply }: { onApply: () => void }) {
           position: 'absolute', bottom: 0, left: 0, right: 0,
           zIndex: 10,
           borderTop: '1px solid rgba(212,175,55,0.15)',
-          background: 'rgba(7,8,10,0.85)',
+          background: 'rgba(1,11,9,0.85)',
           backdropFilter: 'blur(4px)',
         }}
       >
